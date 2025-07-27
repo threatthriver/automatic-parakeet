@@ -319,6 +319,10 @@ main {
   color: var(--light-text);
 }
 
+.hero-subtitle {
+  color: #4a6bff; /* Changing to a blue color */
+}
+
 .hero-image {
   flex: 1;
   display: flex;

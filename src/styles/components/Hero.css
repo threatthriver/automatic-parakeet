@@ -1,0 +1,21 @@
+.hero {
+  padding: var(--section-padding);
+  background-color: var(--cream);
+}
+
+.hero-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.hero-subtitle {
+  color: #4a6bff;
+  margin-bottom: 2rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+}
