@@ -4,19 +4,7 @@ import '../App.css';
 const Home = () => {
   return (
     <div className="App">
-      {/* Navigation */}
-      <nav className="navbar">
-        <div className="container">
-          <div className="nav-brand">
-            <h1>XenArcAI DeepResearch</h1>
-          </div>
-          <ul className="nav-links">
-            <li><a href="#overview">Overview</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#contact">Contact</a></li>
-          </ul>
-        </div>
-      </nav>
+      {/* Navbar is now in App.js */}
 
       {/* Hero Section */}
       <section className="hero">
