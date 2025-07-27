@@ -1,19 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import '../App.css';
 
 const Navbar = () => {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setScrolled(window.scrollY > 20);
+    };
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar">
-      <div className="container">
+    <nav className={`navbar ${scrolled ? 'scrolled' : ''}`}>
+      <div className="nav-container">
         <Link to="/" className="nav-logo">
-          XenArc<span>AI</span>
+          <i className="fas fa-brain"></i>
+          XenArcAI
         </Link>
-        <ul className="nav-links">
-          <li><Link to="/" className="nav-link">Home</Link></li>
-          <li><Link to="/deepresearch" className="nav-link">DeepResearch</Link></li>
-          <li><a href="#contact" className="nav-link">Contact</a></li>
-        </ul>
+        <div className="nav-links">
+          <Link to="/" className="nav-link">
+            <i className="fas fa-home"></i>
+            Home
+          </Link>
+          <Link to="/deepresearch" className="nav-link">
+            <i className="fas fa-search"></i>
+            DeepResearch
+          </Link>
+          <a href="#contact" className="nav-link">
+            <i className="fas fa-envelope"></i>
+            Contact
+          </a>
+        </div>
       </div>
     </nav>
   );
